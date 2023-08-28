@@ -2,6 +2,7 @@
 <p align="center">
 <img src="images\sent_analysis_cover.png" class="center" width="50%"/>
 </p>
+
 ## Overview
 Sentiment analysis is a segment of machine learning that deciphers emotions within textual data. By employing sophisticated algorithms, it classifies text as positive, negative, or neutral, enabling invaluable insights across industries. From enhancing customer experiences to gauging public opinion, sentiment analysis shapes decision-making in our data-driven world.
 
