@@ -6,7 +6,7 @@
 ## Overview
 Sentiment analysis is a segment of machine learning that deciphers emotions within textual data. By employing sophisticated algorithms, it classifies text as positive, negative, or neutral, enabling invaluable insights across industries. From enhancing customer experiences to gauging public opinion, sentiment analysis shapes decision-making in our data-driven world.
 
-In this study, a series of methodologies were applied to accomplish this task, both in the data preprocessing and in the text embedding. More datails can be seen on Methodology topic.
+In this study, a series of methodologies were applied to accomplish this task, both in the data preprocessing and in the text embedding. More datails can be seen in Methodology topic.
 
 ## Objectives
 Measure the impact of different text pre-processing methodologies, such as stop word removal, lemmatization and stemming in different types of word embedding, from the simplest ones like bag of words to LLM like BERT. For the embedding models, the computational cost was also measured and will be taken into account.
