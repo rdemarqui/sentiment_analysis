@@ -14,16 +14,16 @@ Measure the impact of different text pre-processing methodologies, such as stop 
 ## Tecnologies Used
 * python 3.9.16
 * pandas 1.5.3
-* numpy 1.22.4
+* numpy 1.23.5
 * sklearn 1.2.2
-* lightgbm
-* matplotlib
-* seaborn
-* gensim
-* transformers
-* torch
-* sentence_transformers
-
+* lightgbm 4.0.0
+* matplotlib 3.7.1
+* seaborn 0.12.2
+* gensim 4.3.1
+* torch 2.0.1+cu118
+* transformers 4.32.1
+* sentence_transformers 2.2.2
+ 
 ## About the Data
 For this study, we used the dataset **B2W-Reviews01** that is an open corpus of product reviews. It contains more than 130k e-commerce customer reviews, collected from the Americanas.com website between January and May, 2018. [1]
 
