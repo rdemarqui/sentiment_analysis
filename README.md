@@ -12,17 +12,17 @@ In this study, a series of methodologies were applied to accomplish this task, b
 Measure the impact of different text pre-processing methodologies, such as stop word removal, lemmatization and stemming in different types of word embedding, from the simplest ones like bag of words to LLM like BERT. For the embedding models, the computational cost was also measured and will be taken into account.
 
 ## Tecnologies Used
-* python 3.9.16
-* pandas 1.5.3
-* numpy 1.23.5
-* sklearn 1.2.2
-* lightgbm 4.0.0
-* matplotlib 3.7.1
-* seaborn 0.12.2
-* gensim 4.3.1
-* torch 2.0.1+cu118
-* transformers 4.32.1
-* sentence_transformers 2.2.2
+* `python 3.9.16`
+* `pandas 1.5.3`
+* `numpy 1.23.5`
+* `sklearn 1.2.2`
+* `lightgbm 4.0.0`
+* `matplotlib 3.7.1`
+* `seaborn 0.12.2`
+* `gensim 4.3.1`
+* `torch 2.0.1+cu118`
+* `transformers 4.32.1`
+* `sentence_transformers 2.2.2`
  
 ## About the Data
 For this study, we used the dataset **B2W-Reviews01** that is an open corpus of product reviews. It contains more than 130k e-commerce customer reviews, collected from the Americanas.com website between January and May, 2018. [1]
