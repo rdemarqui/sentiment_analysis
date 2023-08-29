@@ -48,6 +48,27 @@ Most embedding models give a vector for each word; in those cases, a mean was ap
 For text classification, we chose lightgbm due to its good accuracy, robustness, and speed. This part of implementation is avaiable on [Vectorization](https://github.com/rdemarqui/sentiment_analysis/blob/main/02%20Vectorization.ipynb) notebook.
 
 ## Results and Conclusions
+In the table below we can check the score of each model aplied in each text column:
+
+<p align="center">
+<img src="images\overall_score.png" class="center" width="90%"/>
+</p>
+
+<p align="center">
+<img src="images\vector_model_boxplot.png" class="center" width="60%"/>
+</p>
+
+
+
+<p align="center">
+<img src="images\top10.png" class="center" width="80%"/>
+</p>
+
+
+<p align="center">
+<img src="images\score_comparison.png" class="center" width="80%"/>
+</p>
+ 
 
 To check if this results is consistents this same code could be applied in other dataframes. On Github there are other good data as well [5][6]. 
 
