@@ -28,15 +28,20 @@ Measure the impact of different text pre-processing methodologies for portuguese
 For this study, we used the dataset **B2W-Reviews01** that is an open corpus of product reviews. It contains more than 130k e-commerce customer reviews, collected from the Americanas.com website between January and May, 2018. [1]
 
 ## Methodology
-This project was divided in two stages, divided in two notebooks.
+This project was divided in two stages: Preprocessing and Vectorization, divided in two notebooks.
 
 Firstly we applyed several methodologies for text cleanning. We started applying text cleaning as uncasing all words, removing punctuation, accentuations and special characteres. After that, we applied different methodologies for text normalization. For stematization we used `nltk` package while in lemmatization wue used `spacy`. Finnaly we combined some of this solution having as final solution six columns: review_text_clean (uncased, punctuation, accentuation and special characters removed); review_text_clean_stop (review_text_clean with stop word removed); review_text_clean_stem (review_text_clean stematized); review_text_clean_stop_stem (review_text_clean, stop words removed and stematized); review_text_clean_lemma (review_text_clean lemmatized); review_text_clean_stop_lemma (review_text_clean, stop words removed and lemmatized).
 
+This proccess can be reproduced using [Text Preprocessing](https://github.com/rdemarqui/sentiment_analysis/blob/main/01%20Text%20Preprocessing.ipynb) jupyter notebook.
+
 As can be seen in the chart below, stematization was the action that more reduced the text vocabulary size:
 <p align="center">
-<img src="images\voc_size.png" class="center" width="40%"/>
+<img src="images\voc_size.png" class="center" width="50%"/>
 </p>
 
+After text preprocessing a several text vectorization (embedding) methods were tested in each of six text columns. First we used `sklearn` to implement bag of words and TF-IDF. After we used `gensim` to implement Word2Vec (CBOW and Skip-gram), FastText, and Doc2Vec (DBOW and DM). Finaly two portuguese fine-tunned pre-trained models was implemented: BERT `neuralmind/bert-base-portuguese-cased`and Sentence Transformer `rufimelo/bert-large-portuguese-cased-sts`, both avaiable on HuggingFace web site.
+
+For text classifi
 
 ## Results and Conclusions
 
