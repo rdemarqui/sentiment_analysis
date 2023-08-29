@@ -27,7 +27,6 @@ Measure the impact of different text pre-processing methodologies for portuguese
 ## About the Data
 For this study, we used the dataset **B2W-Reviews01** that is an open corpus of product reviews. It contains more than 130k e-commerce customer reviews, collected from the Americanas.com website between January and May, 2018. [1]
 
-
 ## Methodology
 This project was divided into two stages: Preprocessing and Vectorization.
 
@@ -48,29 +47,42 @@ Most embedding models give a vector for each word; in those cases, a mean was ap
 For text classification, we chose lightgbm due to its good accuracy, robustness, and speed. This part of implementation is avaiable on [Vectorization](https://github.com/rdemarqui/sentiment_analysis/blob/main/02%20Vectorization.ipynb) notebook.
 
 ## Results and Conclusions
-In the table below we can check the score of each model aplied in each text column:
+In this topic, we will compare all results based on the test dataset.
+
+In the matrix below, we can check the score of each model applied in each text preprocessing method:
 
 <p align="center">
 <img src="images\overall_score.png" class="center" width="90%"/>
 </p>
 
+Comparing all preprocessing methods, on average, lemmatization brought the best result (review_text_clean_lemma = ROC 0.97125). Surprisingly, removing stop words did more harm than good in all cases.
+
+The next chart compares all vectorization methods:
+
 <p align="center">
 <img src="images\vector_model_boxplot.png" class="center" width="60%"/>
 </p>
 
+Bag of Words, TF-IDF, and Word2Vec models showed similar results. FastText performed a little worse but gave very concise results. Apparently, it is indifferent to text preprocessing methods. Surprisingly, Doc2Vec performed worse than the others. Finally, BERT sentence transformer obtained the best result, but with wide variations among the preprocessing methods.
 
+In the chart below, we ranked the top 10 best results. We can see that BERT sentence transformer gave the first two best results. In third place, TF-IDF with stemming brought good results. Comparing the first place with the tenth, we see less than one point of difference, i.e., from 0.98493 to 0.97689.
 
 <p align="center">
 <img src="images\top10.png" class="center" width="80%"/>
 </p>
 
+Finally, in the graph below, we can compare the results of each of the models applied to each preprocessing method:
 
 <p align="center">
 <img src="images\score_comparison.png" class="center" width="80%"/>
 </p>
- 
 
-To check if this results is consistents this same code could be applied in other dataframes. On Github there are other good data as well [5][6]. 
+As noted earlier, BERT sentence transformer got the best result. Its best performance was with just clean text (review_text_clean), without any additional preprocessing.
+
+An item that must be taken into account is the processing time, and in this case, BERT performed worse (even using GPU) when compared to the other models. To process the six models, BERT spent 02:05:43 and obtained a maximum ROC of 0.984702, while TF-IDF spent 00:10:06 to process the same amount of data and obtained a maximum ROC of 0.97907. This trade-off needs to be pondered when implementing it in production.
+
+**Future Improvements**
+Despite relatively worse performances between models, the results obtained were very good. Frederico Souza and João Filho obtained good results too, using TF-IDF and Logistic Regression[4]. This is probably due to the quantity and quality of the available data. A way to check if these results are consistent is to use this same code applied to other dataframes [5][6][7].
 
 ## References
 * [1] https://github.com/americanas-tech/b2w-reviews01
