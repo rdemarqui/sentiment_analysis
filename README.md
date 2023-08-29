@@ -27,6 +27,7 @@ Measure the impact of different text pre-processing methodologies for portuguese
 ## About the Data
 For this study, we used the dataset **B2W-Reviews01** that is an open corpus of product reviews. It contains more than 130k e-commerce customer reviews, collected from the Americanas.com website between January and May, 2018. [1]
 
+
 ## Methodology
 This project was divided in two stages: Preprocessing and Vectorization, divided in two notebooks.
 
