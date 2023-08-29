@@ -41,7 +41,9 @@ As can be seen in the chart below, stematization was the action that more reduce
 
 After text preprocessing a several text vectorization (embedding) methods were tested in each of six text columns. First we used `sklearn` to implement bag of words and TF-IDF. After we used `gensim` to implement Word2Vec (CBOW and Skip-gram), FastText, and Doc2Vec (DBOW and DM). Finaly two portuguese fine-tunned pre-trained models was implemented: BERT `neuralmind/bert-base-portuguese-cased`and Sentence Transformer `rufimelo/bert-large-portuguese-cased-sts`, both avaiable on HuggingFace web site.
 
-For text classifi
+Most embbed models gives a vector for each word, for those cases a mean were applyied resultin in a (1, n) vector.
+
+For text classification we choose `lightgbm` due to it's good acuracy, robusteness and speed.
 
 ## Results and Conclusions
 
