@@ -54,7 +54,7 @@ To check if this results is consistents this same code could be applied in other
 ## References
 * [1] https://github.com/americanas-tech/b2w-reviews01
 * [2] https://huggingface.co/neuralmind/bert-base-portuguese-cased
-* [3] rufimelo/bert-large-portuguese-cased-sts
+* [3] https://huggingface.co/rufimelo/bert-large-portuguese-cased-sts
 * [4] https://arxiv.org/pdf/2201.03382.pdf
 * [5] https://www.kaggle.com/datasets/fredericods/ptbr-sentiment-analysis-datasets
 * [6] https://github.com/larifeliciana/books-reviews-portuguese
