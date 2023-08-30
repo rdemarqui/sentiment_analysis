@@ -16,6 +16,8 @@ Measure the impact of different text pre-processing methodologies for portuguese
 
 ## Tecnologies Used
 * `python 3.9.16`
+* `nltk 3.8.1`
+* `spacy 3.6.1`
 * `pandas 1.5.3`
 * `numpy 1.23.5`
 * `sklearn 1.2.2`
