@@ -39,14 +39,12 @@ For pre-processing, we apply several text cleaning methodologies. We started by 
 
 This process can be reproduced using the [Text Preprocessing](https://github.com/rdemarqui/sentiment_analysis/blob/main/01%20Text%20Preprocessing.ipynb) notebook.
 
-As can be seen in chart 1, stemming was the action that most reduced the text vocabulary size:
-
+As can be seen in figure 1, stemming was the action that most reduced the text vocabulary size:
 
 <p align="center">
 <img src="images\voc_size.png" class="center" width="50%"/>
+<br><em>Figure 1 - Vocabulary size</em>
 </p>
-<p align="center"><em>Chart 1 - Vocabulary size</em></p>
-
 
 After text preprocessing, several text vectorization (embedding) methods were tested in each of the six text columns. First, we used `sklearn` to implement Bag of Words and TF-IDF. Afterward, we used `gensim` to implement Word2Vec (CBOW and Skip-gram), FastText, and Doc2Vec (DBOW and DM). Finally, two Portuguese fine-tuned pre-trained models were implemented: BERT `neuralmind/bert-base-portuguese-cased`[2] and Sentence Transformer `rufimelo/bert-large-portuguese-cased-sts`[3], both available on the HuggingFace website.
 
@@ -61,8 +59,8 @@ In the table 1, we can check the score of each model applied in each text prepro
 
 <p align="center">
 <img src="images\overall_score.png" class="center" width="90%"/>
+<br><em>Table 1 - Overall Score</em>
 </p>
-<p align="center"><em>Table 1 - Overall Score</em></p>
 
 Comparing all preprocessing methods, on average, lemmatization brought the best result (review_text_clean_lemma = ROC 0.97125). Surprisingly, removing stop words did more harm than good in all cases.
 
@@ -70,24 +68,24 @@ The next chart compares all vectorization methods:
 
 <p align="center">
 <img src="images\vector_model_boxplot.png" class="center" width="60%"/>
+<br><em>Figure 2 - Vectorization methods comparison</em>
 </p>
-<p align="center"><em>Chart 2 - Vectorization methods comparison</em></p>
 
 Bag of Words, TF-IDF, and Word2Vec models showed similar results. FastText performed a little worse but gave very concise results. Apparently, it is indifferent to text preprocessing methods. Surprisingly, Doc2Vec performed worse than the others. Finally, BERT sentence transformer obtained the best result, but with wide variations among the preprocessing methods.
 
-In the chart 3, we ranked the top 10 best results. We can see that BERT sentence transformer gave the first two best results. In third place, TF-IDF with stemming brought good results. Comparing the first place with the tenth, we see less than one point of difference, i.e., from 0.98493 to 0.97689.
+In the figure 3, we ranked the top 10 best results. We can see that BERT sentence transformer gave the first two best results. In third place, TF-IDF with stemming brought good results. Comparing the first place with the tenth, we see less than one point of difference, i.e., from 0.98493 to 0.97689.
 
 <p align="center">
 <img src="images\top10.png" class="center" width="80%"/>
+<br><em>Figure 3 - Top 10 best aproach</em>
 </p>
-<p align="center"><em>Chart 3 - Top 10 best aproach</em></p>
 
-Finally, in the chart 4, we can compare the results of each of the models applied to each preprocessing method:
+Finally, in the figure 4, we can compare the results of each of the models applied to each preprocessing method:
 
 <p align="center">
 <img src="images\score_comparison.png" class="center" width="80%"/>
+<br><em>Figure 4 - Score comparison</em>
 </p>
-<p align="center"><em>Chart 4 - Score comparison</em></p>
 
 As noted earlier, BERT sentence transformer got the best result. Its best performance was with just clean text (review_text_clean), without any additional preprocessing.
 
