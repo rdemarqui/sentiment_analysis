@@ -89,7 +89,7 @@ Finally, in the chart 4, we can compare the results of each of the models applie
 
 As noted earlier, BERT sentence transformer got the best result. Its best performance was with just clean text (review_text_clean), without any additional preprocessing.
 
-An item that must be taken into account is the processing time, and in this case, BERT performed worse (even using GPU) when compared to the other models. To process the six models, BERT spent 02:05:43 and obtained a maximum ROC of 0.984702, while TF-IDF spent 00:10:06 to process the same amount of data and obtained a maximum ROC of 0.97907. This trade-off needs to be pondered when implementing it in production.
+An item that must be taken into account is the processing time, and in this case, BERT performed worse (even using GPU) when compared to the other models. To process the six different type of text, BERT spent 02:05:43 and obtained a maximum ROC of 0.984702, while TF-IDF spent 00:10:06 to process the same amount of data and obtained a maximum ROC of 0.97907. This trade-off needs to be pondered when implementing it in production.
 
 **Future Improvements**
 Despite relatively worse performances between models, the results obtained were very good. Frederico Souza and João Filho obtained good results too, using TF-IDF and Logistic Regression[4]. This is probably due to the quantity and quality of the available data. A way to check if these results are consistent is to use this same code applied to other dataframes [5][6][7].
