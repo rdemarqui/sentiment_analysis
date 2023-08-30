@@ -12,7 +12,7 @@ Sentiment analysis is a segment of machine learning that deciphers emotions with
 There are many off-the-shelf solutions to work with text data, especially for the English language. Unfortunately, those options turn restricted when we need to work with the Portuguese language. To explore some possible solutions, in this study, a series of methodologies were applied, both in the data preprocessing and in the text embedding, as can be seen further in the methodology section
 
 ## Objectives
-Measure the impact of different text pre-processing methodologies for portuguese language, such as stop word removal, lemmatization and stemming in different types of word embedding, from the simplest ones like bag of words to LLM like BERT.
+Measure the impact of different text pre-processing methodologies for portuguese language, such as stop word removal, lemmatization and stemming in different types of word embedding, from the simplest ones like bag of words to transfomers like BERT.
 
 ## Tecnologies Used
 * `python 3.9.16`
