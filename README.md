@@ -9,7 +9,7 @@
 ## Overview
 Sentiment analysis is a segment of machine learning that deciphers emotions within textual data. By employing sophisticated algorithms, it classifies text as positive, negative, or neutral, enabling invaluable insights across industries. From enhancing customer experiences to gauging public opinion, sentiment analysis shapes decision-making in our data-driven world.
 
-There are many off-the-shelf solutions to work with text data, especially for the English language. Unfortunately, those options turn restricted when we need to work with the Portuguese language. To explore some possible solutions, in this study, a series of methodologies were applied, both in the data preprocessing and in the text embedding, as can be seen further in the methodology section
+There are many off-the-shelf solutions to work with text data, especially for the English language. Unfortunately, those options turn restricted when we need to work with the Portuguese language. To explore some possible solutions, in this study, a series of methodologies were applied, both in the data preprocessing and in the text embedding, as can be seen further in the methodology section.
 
 ## Objectives
 Measure the impact of different text pre-processing methodologies for portuguese language, such as stop word removal, lemmatization and stemming in different types of word embedding, from the simplest ones like bag of words to transfomers like BERT.
